@@ -1,0 +1,13 @@
+{% extends "basic_app/basic_app_base.html"%}
+
+
+{% block body_block %}
+<h1>Welcome, Here is a list of the worksites!</h1>
+  <ol>
+    {% for worksite in sites %}
+    <h2><li><a href="{{worksite.id}}/">{{worksite.name}}</a></li></h2>
+    {% endfor %}
+  </ol>
+
+
+{% endblock %}

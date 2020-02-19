@@ -1,0 +1,19 @@
+{% extends "basic_app/basic_app_base.html"%}
+
+
+{% block body_block %}
+<div class="jumbotron">
+  <h1>Welcome to the Worksite Detail Page</h1>
+  <h2>sites Details:</h2>
+  <p>{{sites_detail.name}}</p>
+  <p>supervisor: {{sites_detail.supervisor}}</p>
+  <p>location: {{sites_detail.location}} </p>
+  <h3>Employees:</h3>
+   {% for employee in sites_detail.employees.all %}
+
+    <p>{{employee.name}} who is {{employee.age}} years old </p>
+    {% endfor %}
+
+</div>
+
+{% endblock %}
